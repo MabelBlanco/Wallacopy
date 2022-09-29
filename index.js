@@ -1,16 +1,12 @@
 import { controllerListAdvertisements } from "./advertisements/advertisementsController.js";
-
-const titleElement = document.head.children[3]
-const bodyElement = document.body
-
-const newParraf = document.createElement ('p');
-newParraf.innerHTML = `<h1> ${titleElement.textContent} </h1>`
-bodyElement.appendChild (newParraf)
+import { Header } from "./header/headerController.js";
 
 document.addEventListener('DOMContentLoaded', () => {
-    
-    const advertisementsListElement = document.querySelector('.advertisementsList')
   
-    const advertisementsListController = controllerListAdvertisements(advertisementsListElement)
+  const headerElement = document.querySelector('header')
+  const headerController = new Header (headerElement)
   
-  })
+  const advertisementsListElement = document.querySelector('.advertisementsList')
+  const advertisementsListController = controllerListAdvertisements(advertisementsListElement)
+  
+})

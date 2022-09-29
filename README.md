@@ -1,3 +1,3 @@
-Ya se muestran los anuncios, pero el título sale al final de la página, hay que cambiar el orden.
+Me he quedado creando la pagina de login o registro.
 
-También hay que añadir las imágenes o cambiar los vínculos porque ahora mismo no se muestran.
+Hay que añadir las imágenes o cambiar los vínculos porque ahora mismo no se muestran en los anuncios.
