@@ -3,15 +3,24 @@ import { NotificationController } from "../notification/notificationController.j
 import { LoginController, RegisterController } from "./Login-registerController.js"
 
 document.addEventListener ('DOMContentLoaded', () => {
+    // Here we save if the user wants to login or register
+    const params = new URLSearchParams(location.search)
+    const selection = params.get('select')
 
     const headerElement = document.querySelector('header')
     const headerController = new Header (headerElement)
-
+    
+    const notificationController = new NotificationController ()
+    
     const loginElement = document.querySelector('#login')
     const loginController = new LoginController (loginElement)
-
+    
     const registerElement = document.querySelector('#register')
     const registerController = new RegisterController (registerElement)
-
-    const notificationController = new NotificationController ()
+    
+    if (selection === 'login') {
+        registerElement.style.display = 'none'
+    } else {
+        loginElement.style.display = 'none'
+    }
 })
