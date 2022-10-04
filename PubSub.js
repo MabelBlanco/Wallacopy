@@ -1,7 +1,8 @@
 class PubSub {
 
     TOPICS = {
-      NOTIFICATION_ERROR: 'NOTIFICATION_ERROR'
+      NOTIFICATION_ERROR: 'NOTIFICATION_ERROR',
+      NOTIFICATION_USER: 'NOTIFICATION_USER'
     }
   
     constructor() {

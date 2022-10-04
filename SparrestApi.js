@@ -5,7 +5,8 @@ class SparrestApi {
     baseUrl = 'http://localhost:8000'
 
     endpoints = {
-        login: '/auth/login'
+        login: '/auth/login',
+        register: '/auth/register'
     }
 
     async post(endpoint, body) {

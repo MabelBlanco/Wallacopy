@@ -10,3 +10,12 @@ export async function loginUser (username, password) {
 
     return tokenResponse
 }
+
+export async function registerUser (username, password) {
+
+    const body = {username, password}
+
+    const response = await sparrestApi.post (sparrestApi.endpoints.register, body)
+
+    return response
+}

@@ -1,6 +1,6 @@
 import {Header} from "../header/headerController.js"
 import { NotificationController } from "../notification/notificationController.js"
-import { LoginController } from "./Login-registerController.js"
+import { LoginController, RegisterController } from "./Login-registerController.js"
 
 document.addEventListener ('DOMContentLoaded', () => {
 
@@ -9,6 +9,9 @@ document.addEventListener ('DOMContentLoaded', () => {
 
     const loginElement = document.querySelector('#login')
     const loginController = new LoginController (loginElement)
+
+    const registerElement = document.querySelector('#register')
+    const registerController = new RegisterController (registerElement)
 
     const notificationController = new NotificationController ()
 })

@@ -1,4 +1,4 @@
-import { drawLoginRegisterNav } from "./headerView.js"
+import { drawLoginRegisterNav, drawLogOut } from "./headerView.js"
 
 export class Header {
 
@@ -8,6 +8,8 @@ export class Header {
         this.testingTitle()
 
         this.showLoginRegisterNav()
+
+        this.subscribeToLogOutEvent()
     }
 
     testingTitle () {
@@ -18,11 +20,25 @@ export class Header {
 
    showLoginRegisterNav () {
     const token = localStorage.getItem ('token')
+    const loginRegisterNavElement = this.nodeHeaderElement.querySelector ('#login-register-nav')
 
     if (!token) {
-        const loginRegisterNavElement = this.nodeHeaderElement.querySelector ('#login-register-nav')
         drawLoginRegisterNav(loginRegisterNavElement)
+    } else {
+        drawLogOut(loginRegisterNavElement)
     }
-   } 
+   }
+
+   subscribeToLogOutEvent() {
+    const logOutButton = this.nodeHeaderElement.querySelector('#logOut')
+
+    if (logOutButton) {
+        logOutButton.addEventListener('click', (event) => {
+            localStorage.removeItem('token')
+            location.reload()
+        })
+
+    }
+   }
 
 }
