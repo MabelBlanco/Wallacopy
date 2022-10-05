@@ -4,5 +4,13 @@ export function drawLoginRegisterNav (navElement) {
 }
 
 export function drawLogOut (navElement) {
-    navElement.innerHTML = '<button id="logOut">Cerrar Sesión</button>'
+    const sectionElement = document.createElement('section')
+    sectionElement.innerHTML = '<button id="logOut">Cerrar Sesión</button>'
+    navElement.appendChild(sectionElement)
+}
+
+export function drawCreateAdvertisement (navElement) {
+    const sectionElement = document.createElement('section')
+    sectionElement.innerHTML = '<a href="./createAdvertisement.html" id="createAdvertisement">Crear Anuncio</a>'
+    navElement.appendChild(sectionElement)
 }

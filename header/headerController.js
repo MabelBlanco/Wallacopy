@@ -1,4 +1,4 @@
-import { drawLoginRegisterNav, drawLogOut } from "./headerView.js"
+import { drawCreateAdvertisement, drawLoginRegisterNav, drawLogOut } from "./headerView.js"
 
 export class Header {
 
@@ -26,6 +26,7 @@ export class Header {
         drawLoginRegisterNav(loginRegisterNavElement)
     } else {
         drawLogOut(loginRegisterNavElement)
+        drawCreateAdvertisement(loginRegisterNavElement)
     }
    }
 

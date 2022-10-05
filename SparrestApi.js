@@ -6,7 +6,8 @@ class SparrestApi {
 
     endpoints = {
         login: '/auth/login',
-        register: '/auth/register'
+        register: '/auth/register',
+        advertisements: '/api/advertisements'
     }
 
     async post(endpoint, body) {

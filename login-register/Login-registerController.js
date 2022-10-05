@@ -66,9 +66,11 @@ export class RegisterController {
             const password = formData.get ('registerPassword')
             await registerUser(username, password)
             pubSub.publish(pubSub.TOPICS.NOTIFICATION_USER, 'El usuario se ha creado correctamente')
-            // And then we do login too
+            // Then we do login too
             const token = await loginUser(username, password)
             localStorage.setItem('token', token)
+            //And redirect to index.html
+            window.location.assign('./')
 
         } catch (error) {
             pubSub.publish(pubSub.TOPICS.NOTIFICATION_ERROR, 'La creación de usuario ha fallado')

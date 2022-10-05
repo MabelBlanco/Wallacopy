@@ -4,3 +4,17 @@
     justify-content: space-between;
     align-items: center;
 }
+
+#login-register-nav {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+}
+
+#login-register-nav > section {
+    margin: 10px
+}
+
+#login-register-nav > div {
+    margin: 10px
+}
