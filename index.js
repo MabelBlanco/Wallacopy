@@ -1,4 +1,4 @@
-import { controllerListAdvertisements } from "./advertisements/advertisementsController.js";
+import { AdvertisementsListController } from "./advertisementsList/advertisementsListController.js";
 import { Header } from "./header/headerController.js";
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -7,6 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const headerController = new Header (headerElement)
   
   const advertisementsListElement = document.querySelector('.advertisementsList')
-  const advertisementsListController = controllerListAdvertisements(advertisementsListElement)
+  const advertisementsListController = new AdvertisementsListController (advertisementsListElement)
   
 })

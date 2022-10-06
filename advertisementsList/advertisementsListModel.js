@@ -1,3 +1,10 @@
+import { sparrestApi } from "../SparrestApi.js"
+
+export async function getAdvertisements () {
+    const advertisements = await sparrestApi.get(sparrestApi.endpoints.advertisements)
+    return advertisements
+}
+
 export const initialAdvertisements = [
     {
         "name": "Bicicleta",

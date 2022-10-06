@@ -13,7 +13,7 @@ document.addEventListener ('DOMContentLoaded', () => {
     const token = localStorage.getItem('token')
 
     if (token) {
-        //pintamos el formulario de creacion
+        // draw form to create advertisement
         const createAdvertisementElement = document.querySelector('#createAdvertisementForm')
         const createAdvertisementController = new CreateAdvertisementController(createAdvertisementElement)
     } else {

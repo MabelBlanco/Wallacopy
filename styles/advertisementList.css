@@ -1,0 +1,16 @@
+.advertisementsList > article{
+    margin: 20px
+}
+
+.advertisementsList > article > * {
+    margin: 10px;
+}
+
+.advertisementsList > article > h3 {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.advertisementsList img {
+    height: 200px;
+}
