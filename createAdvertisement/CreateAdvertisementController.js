@@ -50,6 +50,7 @@ export class CreateAdvertisementController {
             }
         } else {
             pubSub.publish(pubSub.TOPICS.NOTIFICATION_ERROR, 'Debes elegir si quieres vender o comprar')
+            return 'empty'
         }
     }
 
@@ -62,14 +63,18 @@ export class CreateAdvertisementController {
             const title = formData.get('advertisementTitle')
             const description = formData.get ('advertisementDescription')
             const price = formData.get('advertisementPrice')
-            const isSale = this.validateSale()
             const photo = formData.get ('advertisementPhoto')
+            const isSale = this.validateSale()
 
-            const advertisement = {title, description, price, isSale, photo}
+            if (isSale !== 'empty') {
+                const advertisement = {title, description, price, isSale, photo}
+    
+                const newAdvertisement = await createAdvertisement (advertisement)
+                pubSub.publish(pubSub.TOPICS.NOTIFICATION_USER, 'El anuncio ha sido creado correctamente')
+                window.location.assign('./')
 
-            const newAdvertisement = await createAdvertisement (advertisement)
-            pubSub.publish(pubSub.TOPICS.NOTIFICATION_USER, 'El anuncio ha sido creado correctamente')
-            window.location.assign('./')
+            }
+
 
         })
     }
