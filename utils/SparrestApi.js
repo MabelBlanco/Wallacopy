@@ -64,6 +64,38 @@ class SparrestApi {
       }
         
       }
+    
+  async delete (endpoint) {
+
+    try {
+      const token = localStorage.getItem('token')
+      const response = await fetch(`${this.baseUrl}${endpoint}`, {
+        method: 'DELETE',
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`
+        }
+      })
+  
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error ('Borrado no realizado')
+      } else {
+        return data;
+
+      }
+      
+    } catch (error) {
+      if (error.message === 'Borrado no realizado') {
+        pubSub.publish (pubSub.TOPICS.NOTIFICATION_ERROR, 'Lo sentimos.\nNo se ha podido realizar el borrado.')
+
+      } else {
+        pubSub.publish (pubSub.TOPICS.NOTIFICATION_ERROR, 'No se ha podido conectar con la base de datos.\nInténtelo de nuevo más tarde')
+
+      }
+    }
+  }
 }
 
 export const sparrestApi = new SparrestApi()

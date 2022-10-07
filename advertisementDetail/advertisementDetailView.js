@@ -20,3 +20,11 @@ export function drawAdvertisement (nodeElement, advertisement) {
         <p>Fecha de subida: ${day} - ${month} - ${year}</p>
     </article>`
 }
+
+export function drawUserAdvertisementNav (nodeElement) {
+    const newNav = document.createElement ('nav')
+
+    newNav.innerHTML = `<button class="removeButton">Eliminar Anuncio</button>`
+
+    nodeElement.appendChild (newNav)
+}

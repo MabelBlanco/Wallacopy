@@ -7,4 +7,6 @@ Ya está modificada la página principal para que los anuncios vengan del API. S
 
 Ya está listo el detalle del anuncio. Podría mejorar el título de la página para que fuese personalizado al anuncio (con el nombre del anuncio por ejemplo).
 
-*** Ahora tocaría implementar la eliminación del anuncio por el usuario que lo ha creado.
+Ya está implementada la eliminación del anuncio por el usuario que lo ha creado en el detalle del anuncio. Podría mejorar el poderlo utilizar también en la lista principal y añadir editar anuncio.
+
+*** Quedaría terminar de implementar el spinner para la carga en algunas páginas.
