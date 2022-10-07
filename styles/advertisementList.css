@@ -1,12 +1,19 @@
-.advertisementsList > article{
-    margin: 20px
+.advertisementsList a {
+    text-decoration: none;
+    color: black;
+}
+.advertisementsList  article{
+    margin: 20px;
+    border-width: 3px;
+    border-color: rgb(164, 20, 20);
+    border-style: double;
 }
 
-.advertisementsList > article > * {
+.advertisementsList  article > * {
     margin: 10px;
 }
 
-.advertisementsList > article > h3 {
+.advertisementsList  article > h3 {
     text-decoration: underline;
     font-weight: 600;
 }

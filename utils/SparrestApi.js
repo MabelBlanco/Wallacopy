@@ -23,7 +23,7 @@ class SparrestApi {
 
       } catch (error) {
         if (error.message === 'No se han encontrado resultados') {
-          pubSub.publish(pubSub.TOPICS.NOTIFICATION_ERROR, 'No se han encontrado anuncios para su consulta')
+          pubSub.publish(pubSub.TOPICS.NOTIFICATION_ERROR, 'No se han encontrado resultados para su consulta')
         } else {
           pubSub.publish (pubSub.TOPICS.NOTIFICATION_ERROR, 'No se ha podido conectar con la base de datos.\nInténtelo de nuevo más tarde')
 

@@ -1,4 +1,4 @@
-import { sparrestApi } from "../SparrestApi.js"
+import { sparrestApi } from "../utils/SparrestApi.js"
 
 export async function loginUser (username, password) {
 

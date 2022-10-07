@@ -1,6 +1,6 @@
 import {Header} from "../header/headerController.js"
 import { NotificationController } from "../notification/notificationController.js"
-import { pubSub } from "../PubSub.js"
+import { pubSub } from "../utils/PubSub.js"
 import { CreateAdvertisementController } from "./CreateAdvertisementController.js"
 
 document.addEventListener ('DOMContentLoaded', () => {

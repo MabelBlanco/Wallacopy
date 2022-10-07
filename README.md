@@ -3,6 +3,8 @@ Ya está listo el login y el registro de usuarios. En todo caso, faltaría darle
 Ya está creada la opción, página y funcionalidad de "crear anuncio", aunque quedaría redirigir al usuario a la página de detalle del anuncio creado, por ejemplo, o darle la opción de seguir creando, tal vez.
 
 
-*** Ahora tocaría modificar la página principal para que los anuncios vengan del API.
+Ya está modificada la página principal para que los anuncios vengan del API. Se podría mejorar añadiendo la paginación, ordenar, etc.
 
-Hay que añadir las imágenes o cambiar los vínculos porque ahora mismo no se muestran en los anuncios.
+Ya está listo el detalle del anuncio. Podría mejorar el título de la página para que fuese personalizado al anuncio (con el nombre del anuncio por ejemplo).
+
+*** Ahora tocaría implementar la eliminación del anuncio por el usuario que lo ha creado.

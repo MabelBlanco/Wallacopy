@@ -1,5 +1,5 @@
 import { loginUser, registerUser } from "./Login-registerModel.js"
-import { pubSub } from "../PubSub.js"
+import { pubSub } from "../utils/PubSub.js"
 
 
 

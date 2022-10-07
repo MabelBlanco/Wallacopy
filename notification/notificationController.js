@@ -1,4 +1,4 @@
-import { pubSub } from "../PubSub.js"
+import { pubSub } from "../utils/PubSub.js"
 
 export class NotificationController {
     constructor () {

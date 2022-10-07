@@ -1,9 +1,12 @@
 
 export function drawAdvertisements (advertisements, nodoAdvertisements) {
     advertisements.map(advertisement => {
-        const newArticle = document.createElement('article');
-        newArticle.setAttribute ('id', `advertisement${advertisement.id}`)
+        const newLink = document.createElement ('a')
+        newLink.setAttribute ('href', `./advertisementDetail.html?id=${advertisement.id}`)
+       nodoAdvertisements.appendChild(newLink)
 
+        const newArticle = document.createElement('article');
+        
         const sale = advertisement.isSale?'Venta':'Compra'
         const photo = advertisement.photo?`<img src="${advertisement.photo}" alt="Foto de ${advertisement.name}">`:'';
         
@@ -20,6 +23,12 @@ export function drawAdvertisements (advertisements, nodoAdvertisements) {
         <p>Precio: ${advertisement.price}€</p>
         <p>Fecha de subida: ${day} - ${month} - ${year}</p>`
 
-        nodoAdvertisements.appendChild (newArticle)
+        newLink.appendChild (newArticle)
     })
+}
+
+export function drawEmptyAdvertisements (nodeElement) {
+
+    nodeElement.innerHTML = `
+    <h2> Lo sentimos, ahora mismo no hay ningún anuncio </h2>`
 }

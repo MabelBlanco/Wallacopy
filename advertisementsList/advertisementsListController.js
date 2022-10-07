@@ -1,5 +1,5 @@
 import { getAdvertisements } from "./advertisementsListModel.js";
-import { drawAdvertisements } from "./advertisementsListView.js";
+import { drawAdvertisements, drawEmptyAdvertisements } from "./advertisementsListView.js";
 
 export class AdvertisementsListController {
     constructor (nodeElement) {
@@ -12,9 +12,16 @@ export class AdvertisementsListController {
 
     async showAdvertisements () {
         const advertisements = await getAdvertisements()
-
+        
         this.spinnerElement.style.display = 'none'
+        
+        const testAdvertisement = advertisements[0]
+        if (testAdvertisement) {
 
-        drawAdvertisements (advertisements, this.sectionAdvertisementsElement)
+            drawAdvertisements (advertisements, this.sectionAdvertisementsElement)
+        } else {
+            drawEmptyAdvertisements(this.sectionAdvertisementsElement)
+        }
+
     }
 }
