@@ -63,24 +63,42 @@ Los cambios que se pueden apreciar con respecto al [listado principal](#2--pági
 
 Arriba a la derecha, se sigue visualizando el menú de navegación del usuario, igual que en la [página principal](#2--página-principal).
 
+En estos enlaces podrás visualizar esta página de detalle:
 
+- [Cuando el usuario actual no es el mismo que ha creado el anuncio](https://photos.google.com/photo/AF1QipN3kAqpFwTU1Xnkz8pvrllfiq7JWoLTMfr96pj2)
+- [Cuando el usuario logado es el mismo que ha creado el anuncio](https://photos.google.com/photo/AF1QipPy92fsg6-34SPoNMktjhMyOyji-WK2J5Yq_ora)
 
+4. ### ELIMINAR ANUNCIO ###
 
+Si eres el usuario propietario de un anuncio, tienes la opción de borrarlo.
 
+**Para ello, primero debes estar logado.**
 
+Visita el [listado principal](#2--página-principal) y busca tu anuncio. Ahora haz click en él.
 
+Habrás sido redirigido a la [página de detalle](#3--detalle-del-anuncio).
 
+Debajo de tu anuncio, verás un botón con el texto `Eliminar Anuncio`. Haz click en él.
 
+Te saldrá una **ventana de confirmación** preguntándote si estás seguro. Si seleccionas *Aceptar*, tu anuncio se borrará de la base de datos, saldrá una ventana emergente confirmando el borrado del mismo y serás redirigido a la [página principal](#2--página-principal). Si seleccionas *Cancelar*, sencillamente se cerrará la ventana de confirmación sin que se produzca ningún cambio.
 
-Ya está listo el login y el registro de usuarios. En todo caso, faltaría darle algo más de estilo, pero la funcionalidad está ok.
+5. ### CREAR ANUNCIO ###
 
-Ya está creada la opción, página y funcionalidad de "crear anuncio", aunque quedaría redirigir al usuario a la página de detalle del anuncio creado, por ejemplo, o darle la opción de seguir creando, tal vez.
+**Si has hecho login**, tendrás la opción de crear un anuncio.
 
+Para ello, visita cualquier página y arriba a la izquierda podrás visualizar el enlace *Crear Anuncio*. Haz click en él.
 
-Ya está modificada la página principal para que los anuncios vengan del API. Se podría mejorar añadiendo la paginación, ordenar, etc.
+Te redirigirá a una nueva página en la que aparecerá un formulario con los campos que debes rellenar para crear el anuncio. Los campos son los siguientes:
+- Nombre del producto (requerido)
+- Descripción (requerido)
+- Precio (requerido)
+- ¿Compras o vendes? (requerido): Debes seleccionar Compra o Venta.
+- Link para la imagen (opcional)
 
-Ya está listo el detalle del anuncio. Podría mejorar el título de la página para que fuese personalizado al anuncio (con el nombre del anuncio por ejemplo).
+Los campos *Nombre del producto*, *Descripción* y *Precio* son obligatorios, si alguno de ellos no está relleno, el botón para crear el anuncio permanecerá desactivado.
 
-Ya está implementada la eliminación del anuncio por el usuario que lo ha creado en el detalle del anuncio. Podría mejorar el poderlo utilizar también en la lista principal y añadir editar anuncio.
+El campo *¿Compras o vendes?* con sus respectivas opciones, también es obligatorio. En este caso, si no se selecciona una de estas opciones y se le al botón de `Crear Anuncio`  saldrá un ventana de aviso, informando al usuario de que debe seleccionar una de las opciones.
 
-Ya estaría terminado de implementar el spinner para la carga en las páginas.
+Finalmente, si todos los campos requeridos están rellenos, la página conectará con la base de datos y creará el anuncio. Entonces aparecerá una nueva ventana emergente informando al usuario de que el anuncio se ha creado correctamente. Acto seguido, serás redirigido a la [página principal](#2--página-principal).
+
+En este enlace tienes una visual de esta página
