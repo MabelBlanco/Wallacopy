@@ -49,7 +49,8 @@ Arriba a la derecha, tienes el menú de navegación del usuario. En él podrás 
 - **Si estás logado**: Visualizarás las opciones de **Crear Anuncio** y **Cerrar Sesión**. La primera te redireccionará a otra página en la que encontrarás el formulario para crear el anuncio. La segunda tan solo te hará el log-out y volverá a cargar la página principal.
 
 Aquí te pongo una visual de la página principal:
-<p> <img href="https://photos.google.com/photo/AF1QipMeyWRyj75sf8aoWcDvvgR6f4HQAeWYpMJhQ1_C"> </p>
+- [Sin login](https://photos.google.com/photo/AF1QipMeyWRyj75sf8aoWcDvvgR6f4HQAeWYpMJhQ1_C)
+- [Con login](https://photos.google.com/photo/AF1QipOR_xvAGNstPPqUNc9osmgNXG1Ok81sr9JWXWGX)
 
 3. ### DETALLE DEL ANUNCIO ###
 
