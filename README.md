@@ -88,7 +88,7 @@ Te saldrá una **ventana de confirmación** preguntándote si estás seguro. Si 
 
 Para ello, visita cualquier página y arriba a la izquierda podrás visualizar el enlace *Crear Anuncio*. Haz click en él.
 
-Te redirigirá a una nueva página en la que aparecerá un formulario con los campos que debes rellenar para crear el anuncio. Los campos son los siguientes:
+Te redirigirá a una nueva página (si entrases en ella sin estar logado, saltaría un mensaje informando al usuario del error y se le redirigiría a la [página principal](#2--página-principal)) en la que aparecerá un formulario con los campos que debes rellenar para crear el anuncio. Los campos son los siguientes:
 - Nombre del producto (requerido)
 - Descripción (requerido)
 - Precio (requerido)
@@ -97,8 +97,39 @@ Te redirigirá a una nueva página en la que aparecerá un formulario con los ca
 
 Los campos *Nombre del producto*, *Descripción* y *Precio* son obligatorios, si alguno de ellos no está relleno, el botón para crear el anuncio permanecerá desactivado.
 
-El campo *¿Compras o vendes?* con sus respectivas opciones, también es obligatorio. En este caso, si no se selecciona una de estas opciones y se le al botón de `Crear Anuncio`  saldrá un ventana de aviso, informando al usuario de que debe seleccionar una de las opciones.
+El campo *¿Compras o vendes?* con sus respectivas opciones, también es obligatorio. En este caso, si no se selecciona una de estas opciones y se le da al botón de `Crear Anuncio`  saldrá un ventana de aviso, informando al usuario de que debe seleccionar una de las opciones.
 
 Finalmente, si todos los campos requeridos están rellenos, la página conectará con la base de datos y creará el anuncio. Entonces aparecerá una nueva ventana emergente informando al usuario de que el anuncio se ha creado correctamente. Acto seguido, serás redirigido a la [página principal](#2--página-principal).
 
-En este enlace tienes una visual de esta página
+En este enlace tienes una visual de esta página: [click](https://photos.google.com/photo/AF1QipM_uaQbn1f3F3SFyMr29iW3LjRYVN2HhMpmgJjS)
+
+6. ### REGISTRO ###
+
+Para poder hacer uso de la [creación de anuncios](#5--crear-anuncio), antes debes estar logado.
+
+Para ello, lo primero que debes hacer es crearte un usuario.
+
+Para ir a la página de *Registro*, tan solo visita cualquier página del sitio (sin estar logado), y arriba a la izquierda, verás un enlace con el texto *Registrarse*. Haz click en él.
+
+Se te redirigirá a otra página en la que aparecerá un formulario de registro.
+
+Los campos que verás son los siguientes:
+- Nombre de usuario
+- Contraseña
+- Confirmar contraseña
+
+Para que se habilite el botón de `Registrarse`, debes haber rellenado los 3 campos, sino, permanecerá deshabilitado.
+
+Una vez hayas rellenado los 3 campos, podrás hacer click en el botón `Registrarse` y se validará lo siguiente:
+
+- Que el campo *Contraseña* y *Confirmar contraseña* contengan el mismo texto.
+- Que la contraseña tenga al menos 6 caracteres.
+- Que la contraseña contenga letras y números.
+
+Si no cumpliese alguno de estos requisitos, saldría una ventana emergente informando al usuario del problema correspondiente y no se enviaría el registro a la base de datos. 
+
+Cuando todos los campos estén rellenos correctamente, se enviará el registro a la base de datos, y saldrá una ventana emergente con la confirmación del registro en la misma. También se logea al usuario automáticamente.
+
+En este enlace tienes una visual del formulario de registro: [click](https://photos.google.com/photo/AF1QipOg95bO4MbM8jC4ufBo2k0zdWEkAyN069vbhHrS)
+
+7. ### LOGIN ###
