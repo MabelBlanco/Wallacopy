@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/form-login-register.css">
+    <link rel="stylesheet" href="./styles/spinner.css">
 </head>
 <body>
 
@@ -20,38 +21,14 @@
         <nav id="login-register-nav"></nav>
     </header>
 
+    <section class="login-registerContainer">
+        <div class="spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+
+        <div class="formContainer"></div>
+
+    </section>
     
-    <form class="login-register" id="login">
-        <h2>Entrar</h2>
-        <div class="usernameContainer">
-            <label for="loginUsername">Nombre de usuario:</label>
-            <input type="text" name="loginUsername" id="loginUsername">
-        </div>
-        <div class="passwordContainer">
-            <label for="loginPassword">Contraseña:</label>
-            <input type="text" name="loginPassword" id="loginPassword">
-        </div>
-        <button type="submit" form="login">Entrar</button>
 
-    </form>
-
-    <form class="login-register" id="register">
-        <h2>Registrarse</h2>
-        <div class="usernameContainer">
-            <label for="registerUsername">Nombre de usuario:</label>
-            <input type="text" name="registerUsername" id="registerUsername">
-        </div>
-        <div class="passwordContainer">
-            <label for="registerPassword">Contraseña:</label>
-            <input type="text" name="registerPassword" id="registerPassword">
-        </div>
-        <div class="passwordContainer">
-            <label for="registerPasswordConfirm">Confirmar contraseña:</label>
-            <input type="text" name="registerPasswordConfirm" id="registerPasswordConfirm">
-        </div>
-        <button type="submit" disabled id="registerButton">Registrarse</button>
-
-    </form>
 
     <script type="module" src="./login-register/index.js"></script>
 </body>

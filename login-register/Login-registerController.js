@@ -1,20 +1,34 @@
 import { loginUser, registerUser } from "./Login-registerModel.js"
 import { pubSub } from "../utils/PubSub.js"
+import { drawLoginForm, drawRegisterForm} from "./login-registerView.js"
 
 
 
 export class LoginController{
 
     constructor (nodeElement) {
-        this.loginElement = nodeElement
+        this.loginContainerElement = nodeElement.querySelector('.formContainer')
+        this.spinnerElement = nodeElement.querySelector('.spinner')
+        
+        this.showLoginForm()
+        
+        this.loginElement = this.loginContainerElement.querySelector('#login')
 
         this.subscribeToLoginEvent()
         
     }
 
+    showLoginForm() {
+        this.spinnerElement.classList.add('displayNone')
+        drawLoginForm(this.loginContainerElement)
+    }
+
     subscribeToLoginEvent () {
         this.loginElement.addEventListener ('submit', async (event) => {
             event.preventDefault()
+
+            this.spinnerElement.classList.remove ('displayNone')
+            this.loginElement.classList.add ('displayNone')
 
             await this.login()
 
@@ -40,11 +54,21 @@ export class LoginController{
 export class RegisterController {
 
     constructor(nodeElement) {
-        this.registerElement = nodeElement
+        this.registerContainerElement = nodeElement.querySelector('.formContainer')
+        this.spinnerElement = nodeElement.querySelector ('.spinner')
+        
+        this.showRegisterForm()
+        
+        this.registerElement = nodeElement.querySelector('#register')
 
         this.subscribeToRegisterEvent ()
 
         this.subscribeToValidationRegister()
+    }
+
+    showRegisterForm () {
+        this.spinnerElement.classList.add('displayNone')
+        drawRegisterForm(this.registerContainerElement)
     }
 
     subscribeToRegisterEvent () {
@@ -54,6 +78,8 @@ export class RegisterController {
             const validation = this.validatePassword()
 
             if (validation) {
+                this.spinnerElement.classList.remove('displayNone')
+                this.registerElement.classList.add ('displayNone')
                 await this.register()
             }
         })
@@ -74,7 +100,7 @@ export class RegisterController {
 
         } catch (error) {
             pubSub.publish(pubSub.TOPICS.NOTIFICATION_ERROR, 'La creación de usuario ha fallado')
-            console.log (error)
+            location.reload()
         }
     }
 

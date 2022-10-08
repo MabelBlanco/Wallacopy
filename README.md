@@ -9,4 +9,4 @@ Ya está listo el detalle del anuncio. Podría mejorar el título de la página 
 
 Ya está implementada la eliminación del anuncio por el usuario que lo ha creado en el detalle del anuncio. Podría mejorar el poderlo utilizar también en la lista principal y añadir editar anuncio.
 
-*** Quedaría terminar de implementar el spinner para la carga en algunas páginas.
+Ya estaría terminado de implementar el spinner para la carga en las páginas.

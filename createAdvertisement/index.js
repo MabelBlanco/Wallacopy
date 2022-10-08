@@ -14,7 +14,7 @@ document.addEventListener ('DOMContentLoaded', () => {
 
     if (token) {
         // draw form to create advertisement
-        const createAdvertisementElement = document.querySelector('#createAdvertisementForm')
+        const createAdvertisementElement = document.querySelector('.createAdvertisementSection')
         const createAdvertisementController = new CreateAdvertisementController(createAdvertisementElement)
     } else {
         pubSub.publish(pubSub.TOPICS.NOTIFICATION_ERROR, 'Lo sentimos, pero debes estar logado para acceder a esta función')

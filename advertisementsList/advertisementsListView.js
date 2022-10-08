@@ -8,7 +8,7 @@ export function drawAdvertisements (advertisements, nodoAdvertisements) {
         const newArticle = document.createElement('article');
         
         const sale = advertisement.isSale?'Venta':'Compra'
-        const photo = advertisement.photo?`<img src="${advertisement.photo}" alt="Foto de ${advertisement.name}">`:'';
+        const photo = advertisement.photo?`<img src="${advertisement.photo}" alt="Foto de ${advertisement.title}">`:'';
         
         const date = advertisement.updatedAt
         const year = date[0]+date[1]+date[2]+date[3]

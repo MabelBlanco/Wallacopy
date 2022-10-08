@@ -1,7 +1,7 @@
 export function drawAdvertisement (nodeElement, advertisement) {
     
     const sale = advertisement.isSale?'Venta':'Compra'
-    const photo = advertisement.photo?`<img src="${advertisement.photo}" alt="Foto de ${advertisement.name}">`:'';
+    const photo = advertisement.photo?`<img src="${advertisement.photo}" alt="Foto de ${advertisement.title}">`:'';
     const username = advertisement.user.username
 
     const date = advertisement.updatedAt

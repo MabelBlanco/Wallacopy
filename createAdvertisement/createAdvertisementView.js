@@ -34,3 +34,4 @@ export function drawCreateAdvertisementForm (nodeElement) {
     '<button type="submit" disabled id="buttonAdvertisementForm">Crear Anuncio</button>'+
 '</div>'
 }
+

@@ -4,7 +4,8 @@ import {createAdvertisement} from "./createAdvertisementModel.js"
 
 export class CreateAdvertisementController {
     constructor(nodeElement) {
-        this.createAdvertisementFormElement = nodeElement
+        this.createAdvertisementFormElement = nodeElement.querySelector('form')
+        this.spinnerElement = nodeElement.querySelector('.spinner')
 
         this.createAdvertisementForm()
 
@@ -16,6 +17,7 @@ export class CreateAdvertisementController {
     createAdvertisementForm() {
 
         const advertisementForm = drawCreateAdvertisementForm(this.createAdvertisementFormElement)
+        this.spinnerElement.classList.add ('displayNone')
     }
     //To confirm the inputs required aren't empty.
     validateAdvertisementForm() {
@@ -50,6 +52,8 @@ export class CreateAdvertisementController {
             }
         } else {
             pubSub.publish(pubSub.TOPICS.NOTIFICATION_ERROR, 'Debes elegir si quieres vender o comprar')
+            this.spinnerElement.classList.add ('displayNone')
+            this.createAdvertisementFormElement.classList.remove('displayNone')
             return 'empty'
         }
     }
@@ -57,6 +61,8 @@ export class CreateAdvertisementController {
     subscribeToCreateAdvertisement () {
         this.createAdvertisementFormElement.addEventListener ('submit', async (event) => {
             event.preventDefault()
+            this.spinnerElement.classList.remove ('displayNone')
+            this.createAdvertisementFormElement.classList.add ('displayNone')
 
             const formData = new FormData (this.createAdvertisementFormElement)
             
@@ -70,8 +76,16 @@ export class CreateAdvertisementController {
                 const advertisement = {title, description, price, isSale, photo}
     
                 const newAdvertisement = await createAdvertisement (advertisement)
+                this.spinnerElement.classList.remove ('displayNone')
                 pubSub.publish(pubSub.TOPICS.NOTIFICATION_USER, 'El anuncio ha sido creado correctamente')
-                window.location.assign('./')
+                const anotherAdvertisement = window.confirm('¿Quieres crear otro anuncio?')
+
+                if (anotherAdvertisement) {
+                    location.reload()
+                } else {
+
+                    window.location.assign('./')
+                }
 
             }
 

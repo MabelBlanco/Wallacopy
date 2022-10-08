@@ -12,15 +12,15 @@ document.addEventListener ('DOMContentLoaded', () => {
     
     const notificationController = new NotificationController ()
     
-    const loginElement = document.querySelector('#login')
-    const loginController = new LoginController (loginElement)
     
-    const registerElement = document.querySelector('#register')
-    const registerController = new RegisterController (registerElement)
     
     if (selection === 'login') {
-        registerElement.style.display = 'none'
+        const loginElement = document.querySelector('.login-registerContainer')
+        const loginController = new LoginController (loginElement)
+        
     } else {
-        loginElement.style.display = 'none'
+        const registerElement = document.querySelector('.login-registerContainer')
+        const registerController = new RegisterController (registerElement)
+        
     }
 })
