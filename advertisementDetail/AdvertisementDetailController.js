@@ -36,10 +36,14 @@ export class AdvertisementDetailController {
 
         const tokenActualUser = localStorage.getItem('token')
 
-        const tokenData = decodeToken(tokenActualUser)
+        if (tokenActualUser) {
+            const tokenData = decodeToken(tokenActualUser)
 
-        if (tokenData.userId === userAdvertisementId) {
-            return true
+            if (tokenData.userId === userAdvertisementId) {
+                return true
+            } else {
+                return false
+            }
         } else {
             return false
         }

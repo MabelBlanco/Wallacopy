@@ -1,0 +1,101 @@
+{
+  "users": [
+    {
+      "username": "mabel",
+      "password": "$2b$10$jpnA9yHbN22w86KFwMZYou9nqKxgk0Wa01n3Y6MeThee95QKbQCUi",
+      "id": 1
+    },
+    {
+      "username": "Alex",
+      "password": "$2b$10$pl8j6VBikgFpEVXBpPK03eoGs4Jx73qFfiD0t3Nf8igZx8ABo1X5a",
+      "id": 2
+    },
+    {
+      "username": "Gaia",
+      "password": "$2b$10$pl8j6VBikgFpEVXBpPK03ecoqFyQWGPP7l0L8ApOoG82LfWWd02f.",
+      "id": 3
+    },
+    {
+      "username": "Isabel",
+      "password": "$2b$10$pl8j6VBikgFpEVXBpPK03eMhZGVsg1MJs4GUuW5.qeGyO4rDHYa8e",
+      "id": 4
+    },
+    {
+      "username": "Paco",
+      "password": "$2b$10$pl8j6VBikgFpEVXBpPK03eqHI4tgMDBBe1kMGqQDt7fJTdeVB6KUC",
+      "id": 5
+    },
+    {
+      "username": "Antonio",
+      "password": "$2b$10$yroisb1kybYies3pUudjSuc.IFhQTy5IvA7svf70QUJQ8Ss9WGr5e",
+      "id": 6
+    },
+    {
+      "username": "Raimundo",
+      "password": "$2b$10$zB1UFoAJTZ9KcpklehzmleM0H14pUvYpCvaV5G1JqMVaz2SBxcPsm",
+      "id": 7
+    }
+  ],
+  "advertisements": [
+    {
+      "title": "Bicicleta",
+      "description": "Orbea de carretera",
+      "price": "230",
+      "isSale": true,
+      "photo": "https://www.orbea.com/img/products/product/large/M129TTCC-BZ-SIDE-ORCA_M21eiLTD_0410.jpg",
+      "userId": 4,
+      "updatedAt": "2022-10-06T12:12:27.483Z",
+      "id": 3
+    },
+    {
+      "title": "Ordenador Portátil Mac-Air",
+      "description": "Vendo ordenador portátil en buen estado.",
+      "price": "124",
+      "isSale": true,
+      "photo": "https://expertreviews.b-cdn.net/sites/expertreviews/files/2022/08/m2_macbook_air_2022_review_0.jpg",
+      "userId": 1,
+      "updatedAt": "2022-10-07T14:11:55.693Z",
+      "id": 4
+    },
+    {
+      "title": "Un mundo sin fin",
+      "description": "Un libro muy entretenido!!",
+      "price": "10",
+      "isSale": true,
+      "photo": "https://m.media-amazon.com/images/I/51bAVDrRLIL.jpg",
+      "userId": 2,
+      "updatedAt": "2022-10-08T12:33:53.532Z",
+      "id": 5
+    },
+    {
+      "title": "El nombre del viento",
+      "description": "Que ganas tengo tenerlo! ",
+      "price": "20",
+      "isSale": false,
+      "photo": "https://static.fnac-static.com/multimedia/Images/ES/NR/d0/3f/06/409552/1540-1.jpg",
+      "userId": 7,
+      "updatedAt": "2022-10-08T13:44:12.128Z",
+      "id": 6
+    },
+    {
+      "title": "Baby Yoda",
+      "description": "Lo quieroooo!",
+      "price": "9",
+      "isSale": false,
+      "photo": "https://m.media-amazon.com/images/I/71p0VaM1kwL._AC_SX425_.jpg",
+      "userId": 3,
+      "updatedAt": "2022-10-08T14:02:23.579Z",
+      "id": 7
+    },
+    {
+      "title": "iPhone 3GS",
+      "description": "Me gustaría tener este teléfono",
+      "price": "50",
+      "isSale": false,
+      "photo": "",
+      "userId": 5,
+      "updatedAt": "2022-10-08T14:03:54.537Z",
+      "id": 8
+    }
+  ]
+}
