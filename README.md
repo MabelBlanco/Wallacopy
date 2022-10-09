@@ -196,7 +196,19 @@ Los controladores los he exportado como clases porque he comprobado que así es 
 Los componentes son los siguientes:
 
 - `header`: Se encuentra presente en todas las páginas. Es la cabecera, en la que se incluyen el título de la página y un menú de navegación para el usuario con diferentes opciones según esté logado o no: [Entrar](#7--login) y [Registrarse](#6--registro) (si no está logado) y [Crear Anuncio](#5--crear-anuncio) y [Cerrar Sesión](#8--cerrar-sesión) (si lo está).
+En esta carpeta no he incluido modelo porque en este caso no necesito solicitar datos de la base de datos.
 
 - `advertisementList`: Controla el listado de anuncios de la [página principal](#2--página-principal).
+Cada anuncio es en sí un enlace, cuya propiedad *href* incluye un *query-param* con el id del anuncio para, al hacer click en él y ser redirigido a la página de detalle, ésta pueda recibir esa información. 
 
 - `advertisementDetail`: Controla la visualización del [detalle del anuncio](#3--detalle-del-anuncio) y añade la opción de [Eliminar Anuncio](#4--eliminar-anuncio).
+En esta carpeta se incluye un archivo `index.js` que recoge los nodos de la página mencionada anteriormente y gestiona el resto de controladores necesarios para el funcionamiento de dicha página.
+Recibe la información del id del anuncio mediante una *query-param* situada en la URL, la captura y la utiliza para devolver el anuncio seleccionado en la página principal.
+
+- `createAdvertisement`: Controla la página de [creación de un anuncio](#5--crear-anuncio). 
+Como la anterior, también dispone de un archivo `index.js` que gestiona los nodos y controladores necesarios para el buen funcionamiento de la página.
+
+- `login-register`: Por último, en esta carpeta gestionamos la página de [login](#7--login) y [registro](#6--registro). Cuenta por tanto con su propio archivo `index.js` para extraer nodos y gestionar los controladores oportunos.
+He decidido juntar estos 2 componentes, tanto en una misma página como en la carpeta, los controladores y demás, porque el funcionamiento y visualización es muy similar y, además, porque quería ponérmelo como reto.
+Recibe la selección de *login* o *registro* mediante una *query-param* situada en la URL, según el enlace que el usuario haya clicado en el menú de navegación. Una vez capturada la selección, ejecuta el controlador correspondiente a dicha selección.
+
