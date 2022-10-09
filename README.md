@@ -1,5 +1,21 @@
 # WALLACOPY #
 
+## ÍNDICE ##
+
+- [QUÉ ES](#qué-es)
+- [CÓMO FUNCIONA](#como-funciona)
+    - [Página principal](#2--página-principal)
+    - [Detalle del anuncio](#3--detalle-del-anuncio)
+    - [Eliminar anuncio](#4--eliminar-anuncio)
+    - [Crear Anuncio](#5--crear-anuncio)
+    - [Registro](#6--registro)
+    - [Login](#7--login)
+    - [Cerrar Sesión](#8--cerrar-sesión)
+    - [Carga y Errores](#9--carga-y-errores)
+- [ORGANIZACIÓN](#organización)
+    - [Archivos](#archivos)
+    - [Carpetas](#carpetas)
+
 ## QUÉ ES ##
 Wallacopy es un proyecto encargado por la escuela *Keepcoding* para el módulo *Desarrollo Front-End con Javascript*. 
 
