@@ -8,7 +8,7 @@ export function drawLoginForm (nodeElement) {
     </div>
     <div class="passwordContainer">
         <label for="loginPassword">Contraseña:</label>
-        <input type="text" name="loginPassword" id="loginPassword">
+        <input type="password" name="loginPassword" id="loginPassword">
     </div>
     <button type="submit" form="login">Entrar</button>
     </form>`
@@ -24,11 +24,11 @@ export function drawRegisterForm (nodeElement) {
         </div>
         <div class="passwordContainer">
             <label for="registerPassword">Contraseña:</label>
-            <input type="text" name="registerPassword" id="registerPassword">
+            <input type="password" name="registerPassword" id="registerPassword">
         </div>
         <div class="passwordContainer">
             <label for="registerPasswordConfirm">Confirmar contraseña:</label>
-            <input type="text" name="registerPasswordConfirm" id="registerPasswordConfirm">
+            <input type="password" name="registerPasswordConfirm" id="registerPasswordConfirm">
         </div>
         <button type="submit" disabled id="registerButton">Registrarse</button>
     </form>`
